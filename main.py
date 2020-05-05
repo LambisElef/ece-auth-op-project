@@ -110,37 +110,37 @@ print()
 print("prodA:", end = " ")
 print("{:6}".format(''), end = " ")
 for i in week:
-    print("{:6}".format(mdl.prodA[i].value), end = " ")
+    print("{:6}".format(int(mdl.prodA[i].value)), end = " ")
 print()
 
 # Prints B machines production.
 print("prodB:", end = " ")
 print("{:6}".format(''), end = " ")
 for i in week:
-    print("{:6}".format(mdl.prodB[i].value), end = " ")
+    print("{:6}".format(int(mdl.prodB[i].value)), end = " ")
 print()
 
 # Prints A machines stock.
 print("storA:", end = " ")
 for i in weekZ:
-    print("{:6}".format(mdl.storA[i].value), end = " ")
+    print("{:6}".format(int(mdl.storA[i].value)), end = " ")
 print()
 
 # Prints B machines stock.
 print("storB:", end = " ")
 for i in weekZ:
-    print("{:6}".format(mdl.storB[i].value), end = " ")
+    print("{:6}".format(int(mdl.storB[i].value)), end = " ")
 print()
 
 # Prints state of the production line. 0->A machines, 1->B machines
 print("deci: ", end = " ")
 for i in weekZ:
-    print("{:6}".format(mdl.deci[i].value), end = " ")
+    print("{:6}".format(int(mdl.deci[i].value)), end = " ")
 print()
 
 # Prints change of the state of the production line. 0->no-change, 1->change
 print("chan: ", end = " ")
 print("{:6}".format(''), end = " ")
 for i in week:
-    print("{:6}".format(mdl.chan[i].value), end = " ")
+    print("{:6}".format(int(mdl.chan[i].value)), end = " ")
 print()
