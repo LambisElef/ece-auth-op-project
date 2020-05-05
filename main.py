@@ -50,9 +50,11 @@ for i in week:
     mdl.conList.add(expr = mdl.storB[i-1] >= 0.8*consB[i])
 
     # Constraints the production to be able to fulfill current week's order of A machines.
+    # Not needed since stock can't be negative.
     #mdl.conList.add(expr = mdl.prodA[i] + mdl.storA[i-1] >= consA[i])
 
     # Constraints the production to be able to fulfill current week's order of B machines.
+    # Not needed since stock can't be negative.
     #mdl.conList.add(expr = mdl.prodB[i] + mdl.storB[i-1] >= consB[i])
 
     # Defines that next week's stock of A machines is equal to:
@@ -88,6 +90,20 @@ print("Cost = ", mdl.totalCost())
 print("week#:", end = " ")
 for i in weekZ:
     print("{:6}".format(weekZ[i]), end = " ")
+print()
+
+# Prints A machines order.
+print("consA:", end = " ")
+print("{:6}".format(''), end = " ")
+for i in week:
+    print("{:6}".format(consA[i]), end = " ")
+print()
+
+# Prints B machines order.
+print("consB:", end = " ")
+print("{:6}".format(''), end = " ")
+for i in week:
+    print("{:6}".format(consB[i]), end = " ")
 print()
 
 # Prints A machines production.
